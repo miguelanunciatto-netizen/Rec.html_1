@@ -8,86 +8,98 @@
 </head>
 <body>
 
-    <header>
-        <h1>Empatia & Cooperação</h1>
-        <p>Construindo pontes para um mundo mais humano</p>
-    </header>
+    <div class="container">
+        <h1>Empatia e Cooperação</h1>
+        
+        <p>A empatia é a capacidade de se colocar no lugar do outro, enquanto a cooperação é o ato de trabalhar em conjunto para um objetivo comum. Juntas, essas duas forças transformam comunidades e constroem um mundo mais justo.</p>
+        
+        <div>
+            ### Por que praticar?
+            <ul>
+                <li><strong>Fortalece laços:</strong> Cria conexões humanas mais profundas e verdadeiras.</li>
+                <li><strong>Resolve conflitos:</strong> Permite entender diferentes pontos de vista antes de agir.</li>
+                <li><strong>Gera impacto positivo:</strong> O trabalho em equipe alcança resultados que ninguém conseguiria sozinho.</li>
+            </ul>
+        </div>
 
-    <main class="container">
-        <section class="card">
-            <h2>O que é Empatia?</h2>
-            <p>Empatia é a capacidade de se colocar no lugar do outro, compreender suas emoções e enxergar o mundo sob a perspectiva dele. Não significa necessariamente concordar, mas sim respeitar e acolher a vivência alheia.</p>
-        </section>
-
-        <section class="card">
-            <h2>O Poder da Cooperação</h2>
-            <p>Cooperar é agir em conjunto para alcançar um objetivo comum. Quando unimos a empatia ao trabalho em equipe, criamos ambientes mais saudáveis, inclusivos e inovadores, onde todos crescem juntos.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 - Criado com propósito no GitHub</p>
-    </footer>
+        <p>Quer saber mais sobre como fazer a diferença no dia a dia?</p>
+        
+        <a href="https://www.unba.org" target="_blank" class="btn-link">Saiba Mais Sobre Projetos Sociais</a>
+    </div>
 
 </body>
 </html>
 /* Configurações Gerais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f7f6;
     color: #333;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* Cabeçalho */
-header {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
-    text-align: center;
-    padding: 3rem 1rem;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-/* Conteúdo Principal */
+/* Caixa Principal (Container) */
 .container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
 }
 
-.card {
-    background: white;
-    padding: 2rem;
-    margin-bottom: 1.5rem;
+/* Título */
+h1 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Parágrafos */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Div de Destaque */
+div h3 {
+    color: #2980b9;
+    margin-top: 25px;
+}
+
+/* Lista */
+ul {
+    background-color: #ecf0f1;
+    padding: 20px 20px 20px 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border-left: 5px solid #2575fc;
+    list-style-type: square;
 }
 
-.card h2 {
-    color: #2575fc;
-    margin-bottom: 1rem;
+li {
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: #777;
-    font-size: 0.9rem;
+/* Link / Botão */
+.btn-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-link:hover {
+    background-color: #2980b9;
 }
