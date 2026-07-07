@@ -1,100 +1,293 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empatia e Cooperação</title>
     <style>
-        /* Estilização Geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f7f6;
-            color: #333333;
-            margin: 0;
-            padding: 20px;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
         }
 
-        /* Título Principal */
-        h1 {
+        header {
+            background: linear-gradient(135deg, #4a6bdf, #2c4a9c);
+            color: white;
             text-align: center;
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Blocos de Conteúdo (Containers) */
-        div {
-            background-color: #ffffff;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transform: translateX(-50%);
         }
 
-        /* Parágrafos */
-        p {
-            font-size: 1.1rem;
-            color: #555555;
-            margin-bottom: 15px;
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        /* Listas */
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: #2c4a9c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4a6bdf;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            gap: 3rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c4a9c;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: #4a6bdf;
+            border-radius: 2px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: #f8f9ff;
+            padding: 1.8rem;
+            border-radius: 12px;
+            border-left: 6px solid #4a6bdf;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
         ul {
-            list-style-type: none;
-            padding: 0;
+            padding-left: 1.5rem;
         }
 
         li {
-            background-color: #e8f4f8;
-            margin: 10px 0;
-            padding: 12px 15px;
-            border-left: 5px solid #3498db;
-            border-radius: 4px;
-            font-weight: 500;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
         }
 
-        /* Links (Botão) */
-        a {
-            display: inline-block;
-            text-align: center;
-            width: 100%;
-            background-color: #2ecc71;
+        .highlight {
+            background: #e6f0ff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            font-style: italic;
+            border-left: 5px solid #4a6bdf;
+        }
+
+        footer {
+            background: #2c4a9c;
             color: white;
-            padding: 12px 0;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
         }
 
-        a:hover {
-            background-color: #27ae60;
+        footer a {
+            color: #a0c0ff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            main { padding: 0 1rem; }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Empatia e Cooperação</h1>
+        <p class="subtitle">Compreender o outro é o primeiro passo para construir juntos</p>
+    </header>
 
-    <h1>Empatia e Cooperação</h1>
-
-    <div>
-        <p>A <strong>empatia</strong> é a capacidade de se colocar no lugar do outro, compreendendo seus sentimentos e perspectivas. Ela funciona como a base social que nos permite conectar com as pessoas ao nosso redor de forma profunda e genuína.</p>
-    </div>
-
-    <div>
-        <p>Quando unimos a empatia à ação, damos origem à <strong>cooperação</strong>. Juntas, essas forças transformam ambientes e fortalecem comunidades através de pilares essenciais:</p>
+    <nav>
         <ul>
-            <li>Escuta ativa e sem julgamentos.</li>
-            <li>Apoio mútuo em momentos de dificuldade.</li>
-            <li>Comunicação clara, honesta e respeitosa.</li>
+            <li><a href="#empatia">Empatia</a></li>
+            <li><a href="#cooperacao">Cooperação</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#praticar">Como Praticar</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div>
-        <p>Praticar a empatia diariamente constrói pontes para um futuro mais colaborativo e justo.</p>
-        <a href="https://pt.wikipedia.org/wiki/Empatia" target="_blank">Saiba mais sobre a Empatia</a>
-    </div>
+    <main>
+        <!-- Introdução -->
+        <section id="intro">
+            <h2>Bem-vindo</h2>
+            <p>Em um mundo cada vez mais conectado, a <strong>empatia</strong> e a <strong>cooperação</strong> são competências essenciais para o bem-estar individual e coletivo. Esta página explora esses conceitos fundamentais e oferece caminhos práticos para cultivá-los.</p>
+        </section>
 
+        <!-- Empatia -->
+        <section id="empatia">
+            <h2>O que é Empatia?</h2>
+            <p>A empatia é a capacidade de se colocar no lugar do outro, compreendendo seus sentimentos, pensamentos e perspectivas sem julgamento.</p>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Tipos de Empatia</h3>
+                    <ul>
+                        <li><strong>Cognitiva:</strong> Entender o ponto de vista do outro</li>
+                        <li><strong>Emocional:</strong> Compartilhar os sentimentos alheios</li>
+                        <li><strong>Compasiva:</strong> Desejo de ajudar</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Importância</h3>
+                    <ul>
+                        <li>Melhora relacionamentos</li>
+                        <li>Reduz conflitos</li>
+                        <li>Promove inclusão social</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cooperação -->
+        <section id="cooperacao">
+            <h2>O que é Cooperação?</h2>
+            <p>A cooperação é o ato de trabalhar junto com outras pessoas para alcançar objetivos comuns, valorizando o esforço coletivo.</p>
+            
+            <div class="highlight">
+                “Sozinhos vamos mais rápido, juntos vamos mais longe.” — Provérbio africano
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Exemplos no Dia a Dia</h3>
+                    <ul>
+                        <li>Trabalho em equipe no escritório</li>
+                        <li>Projetos comunitários</li>
+                        <li>Colaboração familiar</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Benefícios</h3>
+                    <ul>
+                        <li>Aumento da produtividade</li>
+                        <li>Criação de laços mais fortes</li>
+                        <li>Inovação coletiva</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section id="beneficios">
+            <h2>Benefícios da Empatia + Cooperação</h2>
+            <ul>
+                <li>Ambientes mais harmoniosos e inclusivos</li>
+                <li>Maior resiliência emocional</li>
+                <li>Desenvolvimento de liderança efetiva</li>
+                <li>Sociedade mais justa e solidária</li>
+            </ul>
+        </section>
+
+        <!-- Como Praticar -->
+        <section id="praticar">
+            <h2>Como Praticar no Dia a Dia</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Exercícios de Empatia</h3>
+                    <ul>
+                        <li>Escuta ativa sem interromper</li>
+                        <li>Praticar o “e se fosse eu?”</li>
+                        <li>Leitura de histórias e romances</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Práticas de Cooperação</h3>
+                    <ul>
+                        <li>Dividir tarefas em grupo</li>
+                        <li>Celebrar conquistas coletivas</li>
+                        <li>Pedir e oferecer ajuda</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido com ❤️ para promover um mundo mais humano</p>
+        <p>
+            <a href="#">Fontes de referência</a> • 
+            <a href="#">Compartilhe esta página</a>
+        </p>
+    </footer>
 </body>
 </html>
