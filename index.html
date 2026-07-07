@@ -1,175 +1,93 @@
-[ HEAD: Metadados e Link para o CSS ]
---------------------------------------------------
-[ BODY: Conteúdo Principal ]
-  │
-  ├── [ DIV: Cabeçalho Principal ]
-  │     └── <h1> Título Inspirador sobre Empatia
-  │
-  ├── [ DIV: Seção de Introdução ]
-  │     ├── <p> Parágrafo definindo empatia no cotidiano.
-  │     └── <p> Parágrafo explicando a importância da cooperação.
-  │
-  ├── [ DIV: Seção Prática / Lista de Ações ]
-  │     ├── <h1> Como Praticar no Dia a Dia
-  │     └── <ul> Lista de atitudes cooperativas
-  │           ├── <li> Item 1 (Escuta ativa)
-  │           ├── <li> Item 2 (Apoio mútuo)
-  │           └── <li> Item 3 (Trabalho em equipe)
-  │
-  └── [ DIV: Rodapé e Recursos ]
-        ├── <p> Mensagem de encerramento.
-        └── <a> Links úteis e personalizados para saber mais.
-            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conexões Humanas: A Força da Empatia e Cooperação</title>
+    <title>Empatia e Cooperação</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="header-container">
-        <h1>Construindo Pontes: Empatia & Cooperação</h1>
-    </div>
+    <header>
+        <h1>Empatia & Cooperação</h1>
+        <p>Construindo pontes para um mundo mais humano</p>
+    </header>
 
-    <div class="main-content">
-        
-        <div class="card-section">
-            <p>A <strong>empatia</strong> é a capacidade de se colocar no lugar do outro, de compreender seus sentimentos e perspectivas sem julgamentos. Em um mundo cada vez mais conectado, porém distante, exercitar a empatia é o primeiro passo para transformar relações superficiais em laços reais de apoio.</p>
-        </div>
+    <main class="container">
+        <section class="card">
+            <h2>O que é Empatia?</h2>
+            <p>Empatia é a capacidade de se colocar no lugar do outro, compreender suas emoções e enxergar o mundo sob a perspectiva dele. Não significa necessariamente concordar, mas sim respeitar e acolher a vivência alheia.</p>
+        </section>
 
-        <div class="card-section">
-            <p>Já a <strong>cooperação</strong> é a tradução prática da empatia. Quando entendemos as necessidades do próximo, nos unimos de forma voluntária para alcançar objetivos comuns. Juntos, conseguimos resolver problemas complexos que nenhum indivíduo conseguiria solucionar sozinho.</p>
-        </div>
+        <section class="card">
+            <h2>O Poder da Cooperação</h2>
+            <p>Cooperar é agir em conjunto para alcançar um objetivo comum. Quando unimos a empatia ao trabalho em equipe, criamos ambientes mais saudáveis, inclusivos e inovadores, onde todos crescem juntos.</p>
+        </section>
+    </main>
 
-        <div class="list-section">
-            <h1>Atitudes que Transformam o Coletivo</h1>
-            <p>Pequenas ações diárias podem gerar grandes impactos na nossa comunidade:</p>
-            <ul>
-                <li><strong>Praticar a escuta ativa:</strong> Ouvir para compreender, e não apenas para responder.</li>
-                <li><strong>Compartilhar conhecimento:</strong> Ajudar colegas com dificuldades em tarefas ou estudos.</li>
-                <li><strong>Validar sentimentos:</strong> Reconhecer e respeitar as emoções das pessoas ao seu redor.</li>
-                <li><strong>Trabalho voluntário:</strong> Doar tempo ou recursos para causas locais de impacto social.</li>
-                <li><strong>Celebrar o sucesso alheio:</strong> Apoiar o crescimento dos outros sem competitividade tóxica.</li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="footer-container">
-        <p>Desenvolvido para a atividade de Desenvolvimento Web Estático. Faça parte dessa mudança!</p>
-        <div class="links-group">
-            <a href="https://www.cvv.org.br/" target="_blank">Apoio Emocional (CVV)</a>
-            <a href="https://www.unicef.org/brazil/" target="_blank">Projetos Globais de Cooperação</a>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 - Criado com propósito no GitHub</p>
+    </footer>
 
 </body>
 </html>
-/* Configurações gerais e reset básico */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6; /* Fundo cinza caloroso e suave */
-    color: #333333;
+/* Configurações Gerais */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
     line-height: 1.6;
 }
 
-/* Estilização do cabeçalho */
-.header-container {
-    background-color: #2a52be; /* Azul escuro acolhedor */
-    color: #ffffff;
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
     text-align: center;
-    padding: 40px 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 3rem 1rem;
 }
 
-.header-container h1 {
-    margin: 0;
+header h1 {
     font-size: 2.5rem;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
-/* Container do conteúdo principal */
-.main-content {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-/* Estilização dos blocos de texto (Cards) */
-.card-section {
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    padding: 25px;
-    border-radius: 8px;
-    border-left: 5px solid #ff6f61; /* Detalhe em cor coral para destaque */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.card-section p {
+header p {
     font-size: 1.1rem;
-    margin: 0;
+    opacity: 0.9;
 }
 
-/* Estilização da seção de listas */
-.list-section {
-    background-color: #ffffff;
-    padding: 25px;
+/* Conteúdo Principal */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #2575fc;
 }
 
-.list-section h1 {
-    color: #2a52be;
-    font-size: 1.8rem;
-    margin-top: 0;
+.card h2 {
+    color: #2575fc;
+    margin-bottom: 1rem;
 }
 
-/* Estilização da lista e seus itens */
-ul {
-    list-style-type: none; /* Remove as bolinhas padrão */
-    padding-left: 0;
-}
-
-li {
-    background-color: #eaf2ff; /* Fundo azul bem claro para os itens */
-    margin-bottom: 10px;
-    padding: 12px 15px;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-li strong {
-    color: #2a52be;
-}
-
-/* Estilização do rodapé */
-.footer-container {
-    background-color: #1e293b; /* Tom escuro para contraste no fim */
-    color: #cbd5e1;
+/* Rodapé */
+footer {
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
-}
-
-.footer-container p {
-    margin-bottom: 15px;
-}
-
-/* Estilização e efeitos dos links (Tags <a>) */
-.links-group a {
-    color: #ff6f61; /* Cor coral para destacar */
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-    transition: color 0.3s ease;
-}
-
-.links-group a:hover {
-    color: #ffffff; /* O link fica branco ao passar o mouse */
-    text-decoration: underline;
+    padding: 2rem;
+    color: #777;
+    font-size: 0.9rem;
 }
